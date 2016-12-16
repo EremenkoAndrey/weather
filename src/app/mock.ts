@@ -11,8 +11,8 @@ export let mockItems:IItems[] = [
     description: 'In France',
     phone: '5165 651 651 62',
     images: [
-      'images/1.jpg',
-      'images/b1.jpg'
+      'assets/images/1.jpg',
+      'assets/images/b1.jpg'
     ],
     temperature: '+10'
   },
@@ -21,8 +21,8 @@ export let mockItems:IItems[] = [
     description: 'In England',
     phone: '5165 651 651 62',
     images: [
-      'images/2.jpg',
-      'images/b2.jpg'
+      'assets/images/2.jpg',
+      'assets/images/b2.jpg'
     ],
     temperature: '-20'
   },
@@ -31,8 +31,8 @@ export let mockItems:IItems[] = [
     description: 'In USA',
     phone: '5165 651 651 62',
     images: [
-      'images/3.jpg',
-      'images/b3.jpg'
+      'assets/images/3.jpg',
+      'assets/images/b3.jpg'
     ],
     temperature: '0'
   }
