@@ -1,15 +1,20 @@
-  <div class="activity-desc">
-    <h5 (click)="setActiveCity()"> {{ city.name }}</h5>
-    <p> {{ city.description }}</p>
+ <div class="coloring" [ngClass]="{selected:city.selected}" (click)="setActiveCity()">
 
-    <h6> {{ city.phone }}</h6>
-  </div>
-  <div class="activity-img">
-    <ul>
-      <li *ngFor="let img of city.images">
-        <img src='{{img}}' alt=""/>
-      </li>
-    </ul>
-  </div>
-  <div class="clear"></div>
+   <div class="activity-desc">
+     <h5> {{ city.name }}</h5>
+     <p> {{ city.description }}</p>
+
+     <h6> {{ city.phone }}</h6>
+   </div>
+   <div class="activity-img">
+     <ul>
+       <li *ngFor="let img of city.images">
+         <img src='{{img}}' alt=""/>
+       </li>
+     </ul>
+   </div>
+   <div class="clear"></div>
+
+ </div>
+
 

@@ -79,6 +79,7 @@ h1 {
 .ele-strip ul li a{
   font-size:1em;
   color: #fff;
+  cursor: pointer;
 }
 /*--teddy-bear--*/
 .teddy-bear {
@@ -164,6 +165,7 @@ span.cloud {
   color: #fff;
   margin:1em 0em 0em 0em;
 }
+
 ul li.anc-bor {
   border-right: none;
 }

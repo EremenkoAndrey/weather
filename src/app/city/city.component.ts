@@ -2,7 +2,8 @@ import { Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: '.activity-row',
-  templateUrl: './city.component.html'
+  templateUrl: './city.component.html',
+  styleUrls: ['./city.component.css']
 })
 export class CityComponent {
   @Input()

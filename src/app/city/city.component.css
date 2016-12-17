@@ -1,0 +1,4 @@
+.coloring:hover,
+.coloring.selected {
+  background-color: #eeeeee;
+}

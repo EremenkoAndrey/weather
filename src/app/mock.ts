@@ -4,7 +4,8 @@ export interface IItems {
   phone: string,
   images: string[],
   temperature: string,
-  continent: string
+  continent: string,
+  selected?: boolean
 }
 export let mockItems:IItems[] = [
   {
