@@ -8,6 +8,7 @@ import { CitiesComponent } from './cities/cities.component';
 import { CityComponent } from './city/city.component';
 import { WeatherComponent } from './weather/weather.component';
 import { AsideComponent } from './aside/aside.component';
+import { ContinentPipe } from './continent.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AsideComponent } from './aside/aside.component';
     CitiesComponent,
     CityComponent,
     WeatherComponent,
-    AsideComponent
+    AsideComponent,
+    ContinentPipe
   ],
   imports: [
     BrowserModule,

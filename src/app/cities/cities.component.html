@@ -4,10 +4,9 @@
 <div class="element-left-bottom">
   <div class="ele-strip">
     <ul>
-      <li><a href="#">Hotel</a></li>
-      <li><a href="#">Fishing</a></li>
-      <li><a href="#">Tours</a></li>
-      <li class="anc-bor"><a href="#">Weather</a></li>
+      <li><a (click)="filterToContinent($event)">America</a></li>
+      <li><a (click)="filterToContinent($event)">Evrope</a></li>
+      <li class="anc-bor"><a (click)="filterToContinent($event)">Asia</a></li>
     </ul>
   </div>
   <div class="village">
@@ -15,7 +14,10 @@
     <span class="line"> </span>
     <div class="activity_box">
       <div class="scrollbar" >
-        <div class="activity-row" (sendActiveCity)="setActiveCity($event)" *ngFor="let city of listOfCities" [city]="city">
+        <div class="activity-row"
+             (sendActiveCity)="setActiveCity($event)"
+             *ngFor="let city of listOfCities | continent:filtredTo"
+             [city]="city">
 
         </div>
       </div>

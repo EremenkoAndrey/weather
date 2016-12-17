@@ -15,10 +15,17 @@ export class CitiesComponent {
   @Output()
   private sendActiveCity = new EventEmitter();
 
+  public filtredTo:string;
+
   constructor() {}
 
   public setActiveCity(e) {
     this.sendActiveCity.emit(e);
+  }
+
+  public filterToContinent(event) {
+    let el = event.target as HTMLLinkElement;
+    this.filtredTo = el.innerText;
   }
 
 }
