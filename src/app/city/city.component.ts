@@ -1,22 +1,21 @@
-import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output} from '@angular/core';
+import { ControllerService } from './../controller/controller.service';
 
 @Component({
   selector: '.activity-row',
   templateUrl: './city.component.html',
-  styleUrls: ['./city.component.css']
+  styleUrls: ['./city.component.css'],
+  providers: []
 })
 export class CityComponent {
   @Input()
   public city;
 
-  @Output()
-  private sendActiveCity = new EventEmitter();
-
-  constructor() {
+  constructor(private controllerService:ControllerService ) {
   }
 
   public setActiveCity() {
-    this.sendActiveCity.emit(this.city);
+    this.controllerService.sendActiveCity.emit(this.city);
   }
 
 }

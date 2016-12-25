@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter } from '@angular/core';
+import {Component, Input } from '@angular/core';
 
 @Component({
   selector: '.element-left',
@@ -12,16 +12,10 @@ export class CitiesComponent {
   @Input()
   public selectedCity;
 
-  @Output()
-  private sendActiveCity = new EventEmitter();
 
   public filtredTo:string;
 
   constructor() {}
-
-  public setActiveCity(e) {
-    this.sendActiveCity.emit(e);
-  }
 
   public filterToContinent(event) {
     let el = event.target as HTMLLinkElement;

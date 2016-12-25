@@ -15,7 +15,6 @@
     <div class="activity_box">
       <div class="scrollbar" >
         <div class="activity-row"
-             (sendActiveCity)="setActiveCity($event)"
              *ngFor="let city of listOfCities | continent:filtredTo"
              [city]="city">
 

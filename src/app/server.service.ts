@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/from';
 
-export interface ICiies {
+export interface ICities {
   name:string,
   description: string,
   phone: string,
@@ -12,7 +12,7 @@ export interface ICiies {
   selected?: boolean
 }
 
-let cities:ICiies[] = [
+let cities:ICities[] = [
   {
     name: 'Paris',
     description: 'In France',
@@ -117,7 +117,7 @@ let cities:ICiies[] = [
 @Injectable()
 export class ServerService {
 
-  get citiesList():Observable<ICiies>{
+  get citiesList():Observable<ICities>{
     return Observable.from(cities);
   }
 
