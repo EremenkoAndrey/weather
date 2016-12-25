@@ -1,26 +1,34 @@
 import { Component } from '@angular/core';
-import { IItems, mockItems } from './mock';
+import { ServerService, ICiies } from './server.service';
+import 'rxjs/add/operator/first';
 
 @Component({
   selector: '.element',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  providers: [ServerService]
 })
 
 export class AppComponent {
-  public listOfCities:IItems[];
-  public selectedCity:IItems;
+  public listOfCities:ICiies[];
+  public selectedCity:ICiies;
 
-  constructor() {
-    this.listOfCities = mockItems;
-    this.selectHandler(this.listOfCities[0]);
+  constructor(private serverService:ServerService) {
+    serverService.citiesList.subscribe((city:ICiies) => {
+      console.log(city);
+      this.listOfCities.push(city);
+    });
+    serverService.citiesList.first().subscribe((city:ICiies) => {
+      console.log(city);
+     //this.selectHandler = city;
+    })
   }
 
   public setActiveCity(city) {
     this.selectHandler(city);
   }
 
-  private selectHandler(city: IItems){
-    this.listOfCities.forEach((item:IItems) => {
+  private selectHandler(city: ICiies){
+    this.listOfCities.forEach((item:ICiies) => {
       if(item.selected) {
         item.selected = false;
       }
