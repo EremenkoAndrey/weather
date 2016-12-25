@@ -9,17 +9,15 @@ import 'rxjs/add/operator/first';
 })
 
 export class AppComponent {
-  public listOfCities:ICiies[];
+  public listOfCities:ICiies[] = [];
   public selectedCity:ICiies;
 
   constructor(private serverService:ServerService) {
     serverService.citiesList.subscribe((city:ICiies) => {
-      console.log(city);
       this.listOfCities.push(city);
     });
     serverService.citiesList.first().subscribe((city:ICiies) => {
-      console.log(city);
-     //this.selectHandler = city;
+      this.selectHandler(city);
     })
   }
 
