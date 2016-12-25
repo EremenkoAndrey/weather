@@ -9,6 +9,8 @@ import { CityComponent } from './city/city.component';
 import { WeatherComponent } from './weather/weather.component';
 import { AsideComponent } from './aside/aside.component';
 import { ContinentPipe } from './continent.pipe';
+import { ControllerService } from './controller/controller.service';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { ContinentPipe } from './continent.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ControllerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

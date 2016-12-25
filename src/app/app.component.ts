@@ -7,7 +7,6 @@ import 'rxjs/add/operator/first';
   templateUrl: './app.component.html',
   providers: [ServerService]
 })
-
 export class AppComponent {
   public listOfCities:ICiies[] = [];
   public selectedCity:ICiies;
